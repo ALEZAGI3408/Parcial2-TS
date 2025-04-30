@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <p>Para calcular el factorial de un número, añade "/factorial/número" a la URL.</p>
+    <p>Por ejemplo: <a href="/factorial/5">/factorial/5</a> para calcular 5!</p>
+    
+    <form action="javascript:void(0);" onsubmit="window.location.href='/factorial/' + document.getElementById('numero').value">
+        <label for="numero">Ingresa un número:</label>
+        <input type="number" id="numero" name="numero" min="0" required>
+        <button type="submit">Calcular Factorial</button>
+    </form>
+</div>
+{% endblock %}
